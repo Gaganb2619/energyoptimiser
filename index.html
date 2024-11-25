@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Energy Optimizer</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #d4fc79, #96e6a1);
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(45deg, #2E7D32, #66BB6A);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            color: #e8f5e9;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        /* Main Section */
+        main {
+            padding: 2rem;
+        }
+
+        /* Form Section */
+        section#inputs {
+            text-align: center;
+        }
+
+        section#inputs h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #2E7D32;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #ffffff;
+            padding: 2rem;
+            margin: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+        }
+
+        form label {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #2E7D32;
+            font-weight: bold;
+        }
+
+        form input {
+            width: 100%;
+            padding: 0.8rem;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            border: 2px solid #66BB6A;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+        }
+
+        form input:focus {
+            border-color: #2E7D32;
+            outline: none;
+        }
+
+        form button {
+            padding: 0.8rem 1.5rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(45deg, #2E7D32, #66BB6A);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        form button:hover {
+            background: linear-gradient(45deg, #66BB6A, #2E7D32);
+            transform: scale(1.05);
+        }
+
+        /* Output Section */
+        section#output {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        section#output h2 {
+            font-size: 1.8rem;
+            color: #388E3C;
+        }
+
+        #results {
+            margin-top: 1rem;
+            padding: 1.5rem;
+            font-size: 1.2rem;
+            color: #2E7D32;
+            background: #E8F5E9;
+            border: 2px solid #81C784;
+            border-radius: 10px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            display: none; /* Hidden initially */
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            padding: 1rem;
+            background: #4CAF50;
+            color: white;
+            font-size: 1rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Animations */
+        #results.show {
+            display: block;
+            animation: fadeIn 0.6s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            form {
+                padding: 1.5rem;
+                max-width: 90%;
+            }
+
+            section#inputs h2,
+            section#output h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AI Energy Optimizer</h1>
+        <p>Maximize efficiency and reduce energy waste with AI-powered insights. Save energy, save resources, save the future.</p>
+    </header>
+    <main>
+        <section id="inputs">
+            <h2>Enter Your Energy Data</h2>
+            <form id="energyForm">
+                <label for="usage">Energy Usage (kWh):</label>
+                <input type="number" id="usage" name="usage" min="1" placeholder="Enter energy usage in kWh" required>
+                <label for="hours">Operating Hours:</label>
+                <input type="number" id="hours" name="hours" min="1" placeholder="Enter operating hours" required>
+                <button type="submit">Optimize Now</button>
+            </form>
+        </section>
+        <section id="output">
+            <h2>Your Optimization Results</h2>
+            <div id="results">Awaiting input...</div>
+        </section>
+    </main>
+    <footer>
+        <p>Powered by Guru Gowda Technology. Helping you build a sustainable future.</p>
+    </footer>
+   
+</body>
+</html>
